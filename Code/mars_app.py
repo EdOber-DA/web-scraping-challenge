@@ -26,7 +26,7 @@ def home():
         hemisphere_image_urls.append({"title": "","img_url":""})
         hemisphere_image_urls.append({"title": "","img_url":""})
         mars_data = {
-            'news_title': '',
+            'news_title': '(TBD) - Press "Scrape New Data Button for latest information',
             'news_p': '',
             'featured_image_url': '',
             'mars_table_html_string': '',
