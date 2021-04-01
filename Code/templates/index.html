@@ -22,26 +22,29 @@
      
   <div class="container-fluid content">
     <div class="row">
-      <div class="col-lg-6 col-md-12">  
+      <!--div class="col-lg-1 col-md-0"> </div -->
+
+      <div class="col-lg-8 col-md-12">  
         <div class="card">
           <h2>Featured Mars Image</h2>
           <img src="{{ mars.featured_image_url }}" class="img-fluid" width="100%"  alt="JPL Featured Mars Space Image">      
         </div>
-    </div>
+      </div>    
      
-        
+       <div class= "col-lg-4 col-md-12">
         <div class="card">
           <h4> Mars Facts</h4>
           <table class="table">
             <code>
-              {{mars.mars_table_html_string}}
+              {{mars.mars_table_html_string | safe}}
             </code>
           </table>
 
         </div>
-
+      </div>
       </div>
      </div>
+    
 
     <div class="container-fluid content">
       <div class="row">
