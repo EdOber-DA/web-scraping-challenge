@@ -22,39 +22,32 @@
      
   <div class="container-fluid content">
     <div class="row">
-      <div class="col-lg-1 col-md-0">
-      </div>
       <div class="col-lg-6 col-md-12">  
         <div class="card">
           <h2>Featured Mars Image</h2>
-          <img src="{{ mars.featured_image_url }}" alt="JPL Featured Mars Space Image">      
+          <img src="{{ mars.featured_image_url }}" class="img-fluid" width="100%"  alt="JPL Featured Mars Space Image">      
         </div>
     </div>
      
-        
-        
-        
         
         <div class="card">
           <h4> Mars Facts</h4>
           <table class="table">
             <code>
-              {{mars.mars_table_html_string|safe}}
+              {{mars.mars_table_html_string}}
             </code>
           </table>
 
         </div>
+
       </div>
-      
-    </div>
-  </div>
-</div>
+     </div>
 
     <div class="container-fluid content">
       <div class="row">
-        <div class="col-lg-12 col-md-0">
+        <div class="col-lg-1 col-md-1">
         </div>
-        <div class="col-lg-6 col-md-12">
+        <div class="col-lg-10 col-md-10">
           <div class="card">
             
               <h3> Mars Hemispheres</h3>
