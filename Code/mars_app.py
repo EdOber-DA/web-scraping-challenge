@@ -14,8 +14,27 @@ def home():
 
     # Find one record of data from the mongo database
     mars_data = mongo.db.collection.find_one()
-
-    # Return template and data
+    # See if we have actual data, or a blank return
+    try:
+        print(mars_data["hemisphere_image_urls"][0]["img_url"])
+    # if a TypeError return we did not get anything and need to create dummy data    
+    except TypeError:
+        mars_data = []
+        hemisphere_image_urls = []
+        hemisphere_image_urls.append({"title": "","img_url":""})
+        hemisphere_image_urls.append({"title": "","img_url":""})
+        hemisphere_image_urls.append({"title": "","img_url":""})
+        hemisphere_image_urls.append({"title": "","img_url":""})
+        mars_data = {
+            'news_title': '',
+            'news_p': '',
+            'featured_image_url': '',
+            'mars_table_html_string': '',
+            'hemisphere_image_urls' : hemisphere_image_urls    
+        }
+        print("Null entry created")
+        
+# Return template and data
     return render_template("index.html", mars=mars_data)
 
 

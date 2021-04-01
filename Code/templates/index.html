@@ -5,22 +5,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Mission to Mars</title>
+  <title>Web Scraping Challenge - Mission to Mars</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <body>
   <div class="container-fluid">
     <div class="jumbotron text-center">
-      <h1>Visit Mars...</h1>
-      <p>Craters, Rovers, crash sites...</p>
+      <h1>Mission to Mars</h1>
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
     </div>
-    <img src="{{ mars.featured_image_url }}" alt="Sloth">
-    <h2>Scraped Mars Article info:</h2>
-    <h3>Headline: {{ mars.news_title }}</h3>
-    <h3>Paragraph: {{ mars.news_p }}</h3>
-  </div>
+    <h2>Latest Mars News</h2>
+    <h3>{{ mars.news_title }}</h3>
+    <p>{{ mars.news_p }}</p>
+    <h4> Mars Table</h4>
+    <div class="row">
+      <div class="col-12 col-md-12">
+        <div class="table-responsive" style="max-height:480px;; max-width: auto">
+          <table class="table">
+           {{mars.mars_table_html_string}}
+          </table>
+        </div> 
+      </div> 
+    </div> 
+    <b></b>
+   
+    <h2>{{mars.hemisphere_image_urls[0].title}}</h2 >
+    <img src="{{mars.hemisphere_image_urls[0].img_url}}" alt="Cerberus Hemisphere">
+
+    <h2>{{mars.hemisphere_image_urls[1].title}}</h2>
+    <img src="{{mars.hemisphere_image_urls[1].img_url}}" alt="Schiaparelli Hemisphere">
+
+    <h2>{{mars.hemisphere_image_urls[2].title}}</h2>
+    <img src="{{mars.hemisphere_image_urls[2].img_url}}" alt="Syrtis Major Hemisphere">
+
+    <h2>{{mars.hemisphere_image_urls[3].title}}</h2>
+    <img src="{{mars.hemisphere_image_urls[3].img_url}}" alt="Valles Marineris Hemisphere">
+
+
+    <h2>Featured Mars Image</h2>
+    <img src="{{ mars.featured_image_url }}" alt="JPL Featured Mars Space Image">
+     
   </div>
 </body>
 
