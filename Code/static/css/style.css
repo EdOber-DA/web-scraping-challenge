@@ -8,8 +8,7 @@ body{
 }
 
  /* header formatting */
- .jumbotron .h1, .jumbotron h1{
-    color:  #920909;
+ h1#byline{
     font-family: 'Times New Roman', serif;
     font-weight:800;  
 }
