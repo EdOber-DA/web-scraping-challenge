@@ -14,22 +14,19 @@ Web Scraping Challenge Assignment - Scraping multiple sites using: Splinter for 
   
   * [CSS:](Code/static/css) Contains css style sheet to format the landing page above.  
 
+
 ## Files
 
-* [Pages:](Pages)
+* [Code:](Code)
 
-  * [Landing Page:](Pages/index.html) - Starting point for the site with navbar and image links to other pages.  
+  * [Jupyter Notebook "mission_to_mars":](Code/mission_to_mars.ipynb) Scrapes 4 sites for text, images and tables and creates dictionary of all the data that is inserted into Mongo collection. 
 
-  * [CSS Styles:](Pages/V4Style.css) - Bootstrap Version 4 style sheet for the site.  
+  * [Python scraping function "scrape_mars":](Code/scrape_mars.py) callable python version of the above. Scrapes 4 sites for text, images and tables and creates dictionary of all the data that is inserted into Mongo collection. 
 
-  * [Comparison Page](Pages/comparisons.html) - Shows all the measurement images on one page with clickable images.  Highlights which one is active in thumbnails.
+  * [Flask / Python app "mars_app":](Code/mars_app.py) Python app that runs the application, with main and scraping routes, and renders the landing page.  
 
-  * [Data Table Page](Pages/table.html) - Scrollable, responsive table with 10 columns of data.  
+  * [Landing Page:](Code/templates/index.html) Starting point for the site with button that initiates the scraping activity.  Displays thescraped information. 
 
-  * [Temperature Page](Pages/temperature.html) - Temperature vs latitude - image, observation info and links to the other measurement pages. 
+  * [CSS Styles:](Code/static/css/style.css) Bootstrap Version 4 style sheet for the site.  
 
-  * [Humidity Page](Pages/humidity.html) - Humidity % vs latitude - image, observation info and links to the other measurement pages. 
- 
-  * [Cloudiness Page](Pages/cloud.html) - Cloudiness % vs latitude - image, observation info and links to the other measurement pages. 
-
-  * [Wind Page](Pages/wind.html) - Wind Speed vs latitude - image, observation info and links to the other measurement pag
+   
