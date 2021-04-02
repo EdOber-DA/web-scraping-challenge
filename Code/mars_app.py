@@ -18,7 +18,7 @@ def home():
     try:
         print(mars_data["hemisphere_image_urls"][0]["img_url"])
     # if a TypeError return we did not get anything and need to create dummy data    
-    except TypeError:
+    except (TypeError):
         mars_data = []
         hemisphere_image_urls = []
         hemisphere_image_urls.append({"title": "","img_url":""})
