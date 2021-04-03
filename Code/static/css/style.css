@@ -1,0 +1,50 @@
+body{
+    background-color: #f7c1c1;
+} */
+/* controls the spacing in the cards
+.card{
+    background-color:rgb(248, 202, 202);
+    padding: 15px
+}
+
+ /* header formatting */
+ h1#byline{
+    font-family: 'Times New Roman', serif;
+    font-weight:800;  
+}
+
+h2{
+    color:  #920909;
+    font-family: 'Times New Roman', serif;
+    font-weight:800;
+}  
+
+h3{
+    color:  #920909;
+    font-family: 'Times New Roman', serif;
+    font-weight:800;
+}
+
+h4{
+    color:  black;
+    font-family: 'Times New Roman', serif;
+    font-weight:800;
+}
+
+.btn{
+    color:   black;
+    font-family: 'Times New Roman', serif;
+    font-weight:800;
+    background-color: #e93f3f;
+}
+
+
+th{
+    background-color: #b83a3a;
+    color: white;
+    font-size: 15px;
+    font-weight:800;
+}
+tr:nth-child(even) {
+    background-color: #d87474;
+}
